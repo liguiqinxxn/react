@@ -3,6 +3,9 @@ import ReactDOM from "react-dom";
 import "./toggle.js";
 import Toggle from "./toggle.js";
 import LoginControl from "./loginControl.js";
+import Mailbox from "./mailbox.js";
+
+const messages = ["React", "Re:React", "Re:Re:React"];
 
 class Clock extends React.Component {
   constructor(props) {
@@ -42,6 +45,7 @@ class Clock extends React.Component {
         <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
         <Toggle></Toggle>
         <LoginControl />
+        <Mailbox unreadMessages={messages} />
       </div>
     );
   }
