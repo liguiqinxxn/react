@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./toggle.js";
 import Toggle from "./toggle.js";
+import LoginControl from "./loginControl.js";
 
 class Clock extends React.Component {
   constructor(props) {
@@ -27,6 +28,7 @@ class Clock extends React.Component {
     // this.setState({
     //   counter: this.state.counter + this.props.increment
     // });
+
     this.setState((state, props) => ({
       counter: state.counter + props.increment
     }));
@@ -39,6 +41,7 @@ class Clock extends React.Component {
         <h1>{this.state.counter}</h1>
         <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
         <Toggle></Toggle>
+        <LoginControl />
       </div>
     );
   }
