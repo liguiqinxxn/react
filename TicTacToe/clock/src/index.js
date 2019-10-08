@@ -4,8 +4,14 @@ import "./toggle.js";
 import Toggle from "./toggle.js";
 import LoginControl from "./loginControl.js";
 import Mailbox from "./mailbox.js";
+import Page from "./page.js";
+import NumberList from "./numberList.js";
 
 const messages = ["React", "Re:React", "Re:Re:React"];
+const numbers = [1, 2, 3, 4, 5];
+const listItems = numbers.map((numbers, index) => (
+  <li key={index}>{numbers}</li>
+));
 
 class Clock extends React.Component {
   constructor(props) {
@@ -46,6 +52,9 @@ class Clock extends React.Component {
         <Toggle></Toggle>
         <LoginControl />
         <Mailbox unreadMessages={messages} />
+        <Page />
+        <ul>{listItems}</ul>
+        <NumberList numbers={numbers} />
       </div>
     );
   }
