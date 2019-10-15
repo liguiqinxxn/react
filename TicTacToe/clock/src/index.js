@@ -6,12 +6,18 @@ import LoginControl from "./loginControl.js";
 import Mailbox from "./mailbox.js";
 import Page from "./page.js";
 import NumberList from "./numberList.js";
+import Blog from "./blog.js";
 
 const messages = ["React", "Re:React", "Re:Re:React"];
 const numbers = [1, 2, 3, 4, 5];
 const listItems = numbers.map((numbers, index) => (
   <li key={index}>{numbers}</li>
 ));
+
+const posts = [
+  { id: 1, title: "Hello world", content: "Welcome to learning React!" },
+  { id: 2, title: "Installation", content: "You can install React from npm." }
+];
 
 class Clock extends React.Component {
   constructor(props) {
@@ -55,6 +61,14 @@ class Clock extends React.Component {
         <Page />
         <ul>{listItems}</ul>
         <NumberList numbers={numbers} />
+        <Blog posts={posts} />
+        <form>
+          <label>
+            名字：
+            <input type="text" name="name" />
+          </label>
+          <input type="submit" value="提交" />
+        </form>
       </div>
     );
   }
