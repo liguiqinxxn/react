@@ -7,6 +7,9 @@ import Mailbox from "./mailbox.js";
 import Page from "./page.js";
 import NumberList from "./numberList.js";
 import Blog from "./blog.js";
+import NameForm from "./nameForm.js";
+import FlavorForm from "./flavorForm.js";
+import Reservation from "./reservation.js";
 
 const messages = ["React", "Re:React", "Re:Re:React"];
 const numbers = [1, 2, 3, 4, 5];
@@ -69,6 +72,9 @@ class Clock extends React.Component {
           </label>
           <input type="submit" value="提交" />
         </form>
+        <NameForm></NameForm>
+        <FlavorForm />
+        <Reservation />
       </div>
     );
   }
