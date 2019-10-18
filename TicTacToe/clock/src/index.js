@@ -10,6 +10,8 @@ import Blog from "./blog.js";
 import NameForm from "./nameForm.js";
 import FlavorForm from "./flavorForm.js";
 import Reservation from "./reservation.js";
+import Calculator from "./boilingVeraict.js";
+import SignUpDialog from "./dialog.js";
 
 const messages = ["React", "Re:React", "Re:Re:React"];
 const numbers = [1, 2, 3, 4, 5];
@@ -75,6 +77,8 @@ class Clock extends React.Component {
         <NameForm></NameForm>
         <FlavorForm />
         <Reservation />
+        <Calculator />
+        <SignUpDialog />
       </div>
     );
   }
