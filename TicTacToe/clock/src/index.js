@@ -12,6 +12,9 @@ import FlavorForm from "./flavorForm.js";
 import Reservation from "./reservation.js";
 import Calculator from "./boilingVeraict.js";
 import SignUpDialog from "./dialog.js";
+import Button from "antd/lib/button";
+import "antd/dist/antd.css";
+// import "App.css";
 
 const messages = ["React", "Re:React", "Re:Re:React"];
 const numbers = [1, 2, 3, 4, 5];
@@ -79,6 +82,7 @@ class Clock extends React.Component {
         <Reservation />
         <Calculator />
         <SignUpDialog />
+        <Button type="primary">按钮</Button>
       </div>
     );
   }
