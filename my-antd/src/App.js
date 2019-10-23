@@ -5,6 +5,7 @@ import { Button } from "antd";
 import "./App.css";
 import ComponentList from "./component/componentList.js";
 import Lifecycle from "./component/Lifecycle.js";
+import Hoc from "./component/Hoc.js";
 
 class App extends Component {
   state = { prop: "some prop" };
@@ -17,10 +18,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Button type="primary">按钮</Button>
-        <ComponentList />
+        {/* <Button type="primary">按钮</Button> */}
+        {/* <ComponentList /> */}
         {/* 生命周期 */}
-        {this.state.prop && <Lifecycle prop={this.state.prop} />}
+        {/* {this.state.prop && <Lifecycle prop={this.state.prop} />} */}
+
+        {/* 高阶组件 */}
+        <Hoc></Hoc>
       </div>
     );
   }

@@ -6,9 +6,11 @@ module.exports = function override(config, env) {
     ["import", { libraryName: "antd", libraryDirectory: "es", style: "css" }],
     config
   );
+
   config = injectBabelPlugin(
     ["@babel/plugin-proposal-decorators", { legacy: true }],
     config
   );
+
   return config;
 };
