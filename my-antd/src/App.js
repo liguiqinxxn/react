@@ -3,12 +3,24 @@ import React, { Component } from "react";
 // import "antd/dist/antd.css";
 import { Button } from "antd";
 import "./App.css";
+import ComponentList from "./component/componentList.js";
+import Lifecycle from "./component/Lifecycle.js";
 
 class App extends Component {
+  state = { prop: "some prop" };
+  componentDidMount() {
+    this.setState({ prop: "a new prop" });
+    setTimeout(() => {
+      this.setState({ prop: "" });
+    }, 2000);
+  }
   render() {
     return (
       <div className="App">
         <Button type="primary">按钮</Button>
+        <ComponentList />
+        {/* 生命周期 */}
+        {this.state.prop && <Lifecycle prop={this.state.prop} />}
       </div>
     );
   }
