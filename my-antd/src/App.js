@@ -6,6 +6,8 @@ import "./App.css";
 import ComponentList from "./component/componentList.js";
 import Lifecycle from "./component/Lifecycle.js";
 import Hoc from "./component/Hoc.js";
+import HookTest from "./component/HookTest.js";
+import ContextTest from "./component/ContextTest.js";
 
 class App extends Component {
   state = { prop: "some prop" };
@@ -24,7 +26,13 @@ class App extends Component {
         {/* {this.state.prop && <Lifecycle prop={this.state.prop} />} */}
 
         {/* 高阶组件 */}
-        <Hoc></Hoc>
+        {/* <Hoc></Hoc> */}
+
+        {/* HOOk */}
+        {/* <HookTest></HookTest> */}
+
+        {/* context */}
+        <ContextTest></ContextTest>
       </div>
     );
   }
