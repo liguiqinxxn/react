@@ -8,6 +8,7 @@ import Lifecycle from "./component/Lifecycle.js";
 import Hoc from "./component/Hoc.js";
 import HookTest from "./component/HookTest.js";
 import ContextTest from "./component/ContextTest.js";
+import KForm from "./component/KForm.js";
 
 class App extends Component {
   state = { prop: "some prop" };
@@ -32,7 +33,10 @@ class App extends Component {
         {/* <HookTest></HookTest> */}
 
         {/* context */}
-        <ContextTest></ContextTest>
+        {/* <ContextTest></ContextTest> */}
+
+        {/* 表单 */}
+        <KForm />
       </div>
     );
   }
